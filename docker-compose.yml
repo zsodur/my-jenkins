@@ -9,7 +9,7 @@ services: # 多个容器集合
       - '8080:8080'
       - '50000:50000'
     volumes: # 卷挂载路径
-      - /home/jenkins/jenkins_home/:/var/jenkins_home # 这是我们一开始创建的目录挂载到容器内的jenkins_home目录
+      - /home/jenkins/jenkins-home/:/var/jenkins-home  # 这是我们一开始创建的目录挂载到容器内的jenkins_home目录
       - /var/run/docker.sock:/var/run/docker.sock
       - /usr/bin/docker:/usr/bin/docker # 这是为了我们可以在容器内使用docker命令
       - /usr/local/bin/docker-compose:/usr/local/bin/docker-compose # 同样的这是为了使用docker-compose命令
